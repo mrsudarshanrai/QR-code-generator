@@ -1,0 +1,63 @@
+body {
+  padding:0;
+   margin:0;
+    box-sizing:border-box;
+}
+
+/*
+
+    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
+    [::::::::::::::      ::::::::::::::]
+    [::::::::::::::      ::::::::::::::]
+    [::::::[[[[[[[:      :]]]]]]]::::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[   Shudarshan Rai     ]:::::]
+    [:::::[   copyright 2019     ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [:::::[                      ]:::::]
+    [::::::[[[[[[[:      :]]]]]]]::::::]
+    [::::::::::::::      ::::::::::::::]
+    [::::::::::::::      ::::::::::::::]
+    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
+
+*/
+.container{
+    display:grid;
+     Place-items:center;
+      width:100%;
+       height:100vh;
+        
+}
+
+.container > .main{
+    width:100%;
+     text-align:center;
+}
+
+.main > input{
+    margin:10px 0;
+     width:50%;
+      border:2px solid ;
+       padding:10px;
+        border-radius:5px;
+         outline:0;
+}
+
+.main > button{
+    padding:10px;
+     border-radius:5px;
+      background:#0f97f9;
+       color:#fff;
+        border:0;
+         margin:0 0 10px;
+}
+
+.main > input:hover{
+    width:60%;
+     transition:0.3s;
+}-p
