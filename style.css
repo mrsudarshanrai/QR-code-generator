@@ -60,4 +60,8 @@ body {
 .main > input:hover{
     width:60%;
      transition:0.3s;
-}-p
+}
+
+#download{
+    display: none;
+}
