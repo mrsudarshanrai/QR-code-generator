@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background: #0A043C;
 }
 
 .container {
@@ -20,19 +21,21 @@ body {
 .main>input {
     margin: 10px 0;
     width: 50%;
-    border: 2px solid;
+    border: 2px solid #BBBBBB;
     padding: 10px;
     border-radius: 5px;
     outline: 0;
+    background: #BBBBBB
 }
 
 .main>button {
     padding: 10px;
     border-radius: 5px;
-    background: #0f97f9;
+    background: #03506F;
     color: #fff;
     border: 0;
     margin: 0 0 10px;
+    outline: none;
 }
 
 .main>input:hover {
