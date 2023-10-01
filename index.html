@@ -1,50 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>QR Code Generator</title>
-          
-          <!--
 
-    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
-    [::::::::::::::      ::::::::::::::]
-    [::::::::::::::      ::::::::::::::]
-    [::::::[[[[[[[:      :]]]]]]]::::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[   Shudarshan Rai     ]:::::]
-    [:::::[   copyright 2019     ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [:::::[                      ]:::::]
-    [::::::[[[[[[[:      :]]]]]]]::::::]
-    [::::::::::::::      ::::::::::::::]
-    [::::::::::::::      ::::::::::::::]
-    [[[[[[[[[[[[[[[      ]]]]]]]]]]]]]]]
+<head>
+    <title>QR Code Generator</title>
 
--->
-<!--JQUERY-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<!--STYLESHEET-->
-<link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-       
-        <div class="container">
-            <div class="main">
-                <input type="text" id="Qrtext" placeholder="Text to generate QR" autofocus >
-                <br>
-                <input type="number" id="dimension" value="250" placeholder="Enter QR Dimensions">
-                <br>
-                <button>Generate QR code</button>
-                <br>
-               <a href="#" id="download"><img src="#" id="qrImg" alt="QR code will appear here"></a>
-            </div>
-            
-         </div>
-<script src="app.js"></script>
-    </body>
+    <!--STYLESHEET-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="main">
+            <input type="text" id="Qrtext" placeholder="Text to generate QR" autofocus>
+            <br>
+            <input type="number" id="dimension" value="250" placeholder="Enter QR Dimensions">
+            <br>
+            <button>Generate QR code</button>
+            <br>
+            <a href="#" id="download"><img src="#" id="qrImg" alt="QR code will appear here"></a>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
 </html>
