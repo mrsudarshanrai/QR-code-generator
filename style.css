@@ -46,3 +46,7 @@ body {
 #download {
     display: none;
 }
+.btn:hover{
+    cursor: pointer;
+    background-color: green;
+}
