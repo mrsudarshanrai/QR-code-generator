@@ -50,3 +50,18 @@ body {
     cursor: pointer;
     background-color: green;
 }
+
+.error-message {
+    position: relative;
+    background-color: #FFB6C1;
+    border: 2px solid #800000;
+    border-radius: 5px;
+    color: #800000;
+    padding: 10px;
+    margin: 0 auto 10px;
+    max-width: 50%;
+    text-align: center;
+    display: none;
+    box-shadow: 0 0 5px 3px rgba(255, 0, 0, 0.5);
+  }
+  
