@@ -12,7 +12,7 @@ Generate QR codes easily with this simple web application built using HTML, CSS,
 
 ## Demo
 
-You can check out the live demo [here]([https://mrsudarshanrai.github.io/QR-code-generator/]).
+You can check out the live demo [here](https://mrsudarshanrai.github.io/QR-code-generator/).
 
 ## Features
 
