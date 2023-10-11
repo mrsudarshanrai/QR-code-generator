@@ -21,25 +21,29 @@ $("button").click(() => {
     // Display error for missing dimensions
     errorContainer.text("Dimension is required.");
     errorContainer.show();
+  } else if (dimension.trim() && dimension > 547) {
+    // Display error for invalid dimension
+    errorContainer.text("Invalid dimension. Max dimension is 547px.");
+    errorContainer.show();
   } else {
     // Generate the QR code and download link
     qrImg.attr(
       "src",
       "http://chart.apis.google.com/chart?cht=qr&chl=" +
-        qrText +
-        "&chs=" +
-        dimension +
-        "x" +
-        dimension
+      qrText +
+      "&chs=" +
+      dimension +
+      "x" +
+      dimension
     );
     download.attr(
       "href",
       "http://chart.apis.google.com/chart?cht=qr&chl=" +
-        qrText +
-        "&chs=" +
-        dimension +
-        "x" +
-        dimension
+      qrText +
+      "&chs=" +
+      dimension +
+      "x" +
+      dimension
     );
 
     // Show the QR code and download link
@@ -47,3 +51,6 @@ $("button").click(() => {
     download.show();
   }
 });
+
+
+const qrText = $("#Qrtext").val();
