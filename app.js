@@ -51,6 +51,3 @@ $("button").click(() => {
     download.show();
   }
 });
-
-
-const qrText = $("#Qrtext").val();
