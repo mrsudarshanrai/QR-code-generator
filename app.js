@@ -1,15 +1,27 @@
 $("button").click(() => {
   const qrText = $("#Qrtext").val();
-  const dimension = $("#dimension").val();
+  const Dimension = $("#dimension").val();
   const qrImg = $("#qrImg");
   const download = $("#download");
   const errorContainer = $("#errorContainer");
+  // console.log(typeof(dimension))
+  var dimension = parseInt(Dimension,10);
+  if(dimension > 400) {
+    dimension=(dimension%400);
+    console.log(">400")
+  }
+  if(dimension < 200 ) {
+      dimension = 200;
+      console.log("<200")
+    }
+  
+
 
   // Reset error messages
   errorContainer.text("");
   errorContainer.hide();
 
-  if (!qrText.trim() && !dimension.trim()) {
+  if (!qrText.trim() && !Dimension.trim()) {
     // Display error for both QR text and dimension missing
     errorContainer.text("Both QR text and dimension are required fields.");
     errorContainer.show();
@@ -17,7 +29,7 @@ $("button").click(() => {
     // Display error for missing QR text
     errorContainer.text("QR text is required.");
     errorContainer.show();
-  } else if (!dimension.trim()) {
+  } else if (!Dimension.trim()) {
     // Display error for missing dimensions
     errorContainer.text("Dimension is required.");
     errorContainer.show();
@@ -28,9 +40,9 @@ $("button").click(() => {
       "http://chart.apis.google.com/chart?cht=qr&chl=" +
         qrText +
         "&chs=" +
-        dimension +
+        (dimension%400) +
         "x" +
-        dimension
+        (dimension%400)
     );
     download.attr(
       "href",
