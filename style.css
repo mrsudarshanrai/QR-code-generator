@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background: #0A043C;
+    background: linear-gradient(to right, #7f53ac,#657ced);
 }
 
 .container {
@@ -21,11 +21,11 @@ body {
 .main>input {
     margin: 10px 0;
     width: 50%;
-    border: 2px solid #BBBBBB;
+    border: 2px solid transparent;
     padding: 10px;
     border-radius: 5px;
     outline: 0;
-    background: #BBBBBB
+    background: #fff;
 }
 
 .main>button {
@@ -38,17 +38,28 @@ body {
     outline: none;
 }
 
+.main>h1{
+    font-size: 3rem;
+    color:#fff;
+    padding-top: 1rem;
+}
 .main>input:hover {
-    width: 60%;
+    transform: scaleX(1);
     transition: 0.3s;
+    /* border:2px solid  #03506F; */
 }
 
 #download {
     display: none;
 }
-.btn:hover{
+
+.main>.btn{
+    background-color:rgba(205, 15, 205, 0.381);
+    margin-top: 1.5rem;
+}
+.main>.btn:hover{
     cursor: pointer;
-    background-color: green;
+    background-color:#7f53ac;
 }
 
 .error-message {
