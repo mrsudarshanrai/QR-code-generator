@@ -4,10 +4,14 @@ $("button").click(() => {
   const qrImg = $("#qrImg");
   const download = $("#download");
   const errorContainer = $("#errorContainer");
+  const loadingIndicator = $(".loading");
 
   // Reset error messages
   errorContainer.text("");
   errorContainer.hide();
+
+  // Show loading indicator
+  loadingIndicator.show();
 
   if (!qrText.trim() && !dimension.trim()) {
     // Display error for both QR text and dimension missing
@@ -23,27 +27,22 @@ $("button").click(() => {
     errorContainer.show();
   } else {
     // Generate the QR code and download link
-    qrImg.attr(
-      "src",
-      "http://chart.apis.google.com/chart?cht=qr&chl=" +
-        qrText +
-        "&chs=" +
-        dimension +
-        "x" +
-        dimension
-    );
-    download.attr(
-      "href",
-      "http://chart.apis.google.com/chart?cht=qr&chl=" +
-        qrText +
-        "&chs=" +
-        dimension +
-        "x" +
-        dimension
-    );
+    const qr = new QRCode(qrImg[0], {
+      text: qrText,
+      width: parseInt(dimension),
+      height: parseInt(dimension),
+    });
+
+    // Hide loading indicator
+    loadingIndicator.hide();
 
     // Show the QR code and download link
     qrImg.show();
+    download.attr(
+      "href",
+      qrImg[0].childNodes[0].toDataURL("image/png")
+    );
+    download.attr("download", "qrcode.png");
     download.show();
   }
 });
