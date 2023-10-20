@@ -23,27 +23,19 @@ $("button").click(() => {
     errorContainer.show();
   } else {
     // Generate the QR code and download link
-    qrImg.attr(
-      "src",
-      "http://chart.apis.google.com/chart?cht=qr&chl=" +
-        qrText +
-        "&chs=" +
-        dimension +
-        "x" +
-        dimension
-    );
-    download.attr(
-      "href",
-      "http://chart.apis.google.com/chart?cht=qr&chl=" +
-        qrText +
-        "&chs=" +
-        dimension +
-        "x" +
-        dimension
-    );
+    const qr = new QRCode(qrImg[0], {
+      text: qrText,
+      width: parseInt(dimension),
+      height: parseInt(dimension),
+    });
 
     // Show the QR code and download link
     qrImg.show();
+    download.attr(
+      "href",
+      qrImg[0].childNodes[0].toDataURL("image/png")
+    );
+    download.attr("download", "qrcode.png");
     download.show();
   }
 });
