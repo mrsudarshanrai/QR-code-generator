@@ -3,65 +3,65 @@ body {
     margin: 0;
     box-sizing: border-box;
     background: #0A043C;
+    font-family: Arial, sans-serif; /* Using a standard font for better compatibility */
 }
 
 .container {
     display: grid;
-    Place-items: center;
+    place-items: center; /* Corrected the property name to 'place-items' */
     width: 100%;
     height: 100vh;
-
 }
 
-.container>.main {
-    width: 100%;
+.container > .main {
+    width: 80%; /* Adjusted width for better readability */
     text-align: center;
 }
 
-.main>input {
+.main > input {
     margin: 10px 0;
-    width: 50%;
-    border: 2px solid #BBBBBB;
-    padding: 10px;
-    border-radius: 5px;
+    width: 60%; /* Increased the width for better user experience */
+    border: 2px solid #1E90FF; /* Changed border color to a more appealing shade */
+    padding: 12px; /* Increased padding for better user interaction */
+    border-radius: 8px; /* Enhanced border radius for a smoother look */
     outline: 0;
-    background: #BBBBBB
+    background: #F0F8FF; /* Changed the background color for better contrast */
 }
 
-.main>button {
-    padding: 10px;
-    border-radius: 5px;
-    background: #03506F;
+.main > button {
+    padding: 12px; /* Increased padding for better clickability */
+    border-radius: 8px; /* Adjusted border radius for consistency */
+    background: #1E90FF; /* Changed the background color to a more engaging shade */
     color: #fff;
     border: 0;
     margin: 0 0 10px;
     outline: none;
 }
 
-.main>input:hover {
-    width: 60%;
+.main > input:hover {
+    width: 70%; /* Adjusted width on hover for better user feedback */
     transition: 0.3s;
 }
 
 #download {
     display: none;
 }
-.btn:hover{
+
+.btn:hover {
     cursor: pointer;
-    background-color: green;
+    background-color: #008000; /* Changed the hover background color for better visibility */
 }
 
 .error-message {
     position: relative;
-    background-color: #FFB6C1;
-    border: 2px solid #800000;
-    border-radius: 5px;
-    color: #800000;
-    padding: 10px;
+    background-color: #FFE4E1; /* Changed the background color for improved contrast */
+    border: 2px solid #B22222; /* Changed the border color for better visibility */
+    border-radius: 8px; /* Adjusted border radius for consistency */
+    color: #B22222; /* Adjusted text color for better contrast */
+    padding: 12px; /* Increased padding for better presentation */
     margin: 0 auto 10px;
-    max-width: 50%;
+    max-width: 60%; /* Adjusted the max-width for better display on larger screens */
     text-align: center;
     display: none;
-    box-shadow: 0 0 5px 3px rgba(255, 0, 0, 0.5);
-  }
-  
+    box-shadow: 0 0 8px 4px rgba(255, 0, 0, 0.7); /* Adjusted the box shadow for a more pronounced effect */
+}
